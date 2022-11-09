@@ -1,0 +1,16 @@
+<button type="button" class="btn btn-success" routerLink="/welcome">Back</button>
+<h4>Welcome to shopping....</h4>
+<h4>{{data}}</h4>
+<div class="card" >
+    <div class="card-body">
+      <div *ngFor="let itm1 of item">
+      <div class="card-body" style="width: 40rem;">
+       <h3>{{itm1.category}}</h3><br>
+       <td>{{itm1.title}}</td><br>
+       <td>{{itm1.skuId}}</td><br>
+       <td>{{itm1.description}}</td>
+       <button (click)="get(itm1.skuId)">View Details</button>
+      </div>
+      </div>
+    </div>
+    </div>

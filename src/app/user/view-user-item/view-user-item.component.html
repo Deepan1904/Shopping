@@ -1,0 +1,28 @@
+<div class="card" style="width: 60rem; height: 30rem;">
+    <div class="card-body">
+        <h4 style="float:left;" >{{data}}</h4>
+        <button class="b1" type="button" class="btn btn-link" routerLink="/user" style="float: right;">Back to Dashboard</button>
+        <button type="button" class="btn btn-primary" style="float: right;" (click)="viewCart(item)">View cart</button>
+        <table datatable class="table table-bordered table-striped table-hover">
+        <tr>
+            <th>Category</th><td>{{item.category}}</td>
+        </tr>
+        <tr>
+            <th>Title</th><td>{{item.skuId}}</td>
+        </tr>
+        <tr>
+            <th>SKU Id</th><td>{{item.title}}</td>
+        </tr>
+        <tr>
+            <th>Description</th>{{item.description}}
+        </tr>
+        <tr>
+            <th>Price</th><td>{{item.price}}</td>
+        </tr>
+        <tr>
+            <th>Quantity</th><td><input type="number" min="1" max="1000" placeholder="Quantity" [(ngModel)]="item.quantity" ></td>
+        </tr>
+            <button class="btn btn-success" (click)="addCart(item)">Add to cart</button>
+    </table>
+    </div>
+</div>

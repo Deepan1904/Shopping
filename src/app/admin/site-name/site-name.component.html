@@ -1,0 +1,13 @@
+<h1>Admin - Set Site Name</h1>
+<button id="Back-to-Dashboard" class="btn btn-Link"><a href="/adminPage" style="float: right;">Back to Dashboard</a></button>
+<div class="card" style="width: 40rem; height: 15rem;">
+    <div class="card-body"> 
+    <table datatable class="table table-bordered table-striped table-hover">
+        <tr>
+        <th>Site Name</th><td><input type="text" [(ngModel)]="setName" placeholder="Enter Site-Name"></td>
+        </tr>
+    </table>
+        <button class="btn btn-success" (click)="set()" style="float: right;">set</button>
+        <button class="cancel" type="button" class="btn btn-danger" routerLink="/adminPage" style="float: left;">Cancel</button>
+</div>
+</div>

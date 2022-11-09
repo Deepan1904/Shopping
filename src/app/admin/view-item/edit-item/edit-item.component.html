@@ -1,0 +1,23 @@
+<div class="card" style="width: 55rem; height: 30rem;">
+    <div class="card-body">
+    <table class="center">
+        <tr>
+            <th>Category</th><td><input type="text" [(ngModel)]="item.category"></td>
+        </tr>
+        <tr>
+            <th>Title</th><td><input type="text" [(ngModel)]="item.title"></td>
+        </tr>
+        <tr>
+            <th>SKU Id</th><td>{{item.skuId}}</td>
+        </tr>
+        <tr>
+            <th>Description</th><td><input type="text" minlength="8" [(ngModel)]="item.description"></td>
+        </tr>
+        <tr>
+            <th>Price</th><td><input type="number" min="1" max="100000" [(ngModel)]="item.price"><p>Range 1 to 100000</p></td>
+        </tr>
+    </table>
+    <button class="btn btn-success" (click)="update()">Update</button>
+    <button class="btn btn-primary" (click)="back()">cancel</button>
+    </div>
+    </div>

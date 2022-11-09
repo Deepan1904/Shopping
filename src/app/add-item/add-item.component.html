@@ -1,0 +1,26 @@
+<h1>Admin-Add Item</h1>
+<button class="btn btn-secondary" routerLink="/">Go to Main</button>
+<button class="b1" type="button" class="btn btn-success" routerLink="/adminPage">Go back</button>
+<div class="card" style="width: 55rem; height: 30rem;">
+<div class="card-body">
+<table class="center">
+    <tr>
+        <th>Category</th><td><input type="text" [(ngModel)]="itemToAdd.category" placeholder="Category Name"></td>
+    </tr>
+    <tr>
+        <th>Title</th><td><input type="text" [(ngModel)]="itemToAdd.title" placeholder="Title"></td>
+    </tr>
+    <tr>
+        <th>SKU Id</th><td><input type="text" [(ngModel)]="itemToAdd.skuId" placeholder="ID"></td>
+    </tr>
+    <tr>
+        <th>Description</th><td><input type="text" minlength="8" [(ngModel)]="itemToAdd.description" placeholder="Description"></td>
+    </tr>
+    <tr>
+        <th>Price</th><td><input type="number" min="1" max="100000" [(ngModel)]="itemToAdd.price" placeholder="Price"><p>Range 1 to 100000</p></td>
+    </tr>
+</table>
+</div>
+<button type="button" class="btn btn-primary" (click)="add()">Add Item</button>
+</div>
+

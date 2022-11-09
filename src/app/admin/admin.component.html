@@ -1,0 +1,31 @@
+<!-- routerLink="/add" -->
+  
+  <div class="container">
+        <h2>Admin-Dashboard</h2>
+        <h3>Site-Name:{{data}}</h3>
+        <button class="btn btn-secondary" routerLink="/">Go back</button>
+        <button class="btn btn-Link"><a href="/add">Add New Item</a></button>
+        <button id=”shopping-site-name” class="btn btn-link" ><a href="/siteName">Set SiteName</a></button> 
+        <table datatable class="table table-bordered table-striped table-hover">
+          <thead>
+          <tr> 
+              <th>Category</th>
+              <th>SKU ID</th>
+              <th>Title</th>
+              <th>Description</th>
+              <th>Price</th>
+              <th>Action</th>
+            </tr>
+          </thead> 
+          <tbody>
+            <tr *ngFor="let itm of item">
+              <td id="category">{{itm.category}}</td>
+              <td id="skuid">{{itm.skuId}}</td>
+              <td id="title">{{itm.title}}</td>
+              <td id="description">{{itm.description}}</td>
+              <td id="price">{{itm.price}}</td>
+              <button id="view-item" class="btn btn-primary" (click)="get(itm.skuId)">View Details</button>
+            </tr>
+          </tbody>
+          </table>
+      </div>

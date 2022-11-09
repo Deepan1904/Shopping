@@ -1,0 +1,27 @@
+shadow {
+    text-shadow: 3px 3px 2px rgb(244, 239, 239);
+}
+
+.logo-styles{
+    width: 80px; 
+    font-size: 50px; 
+    color: #eb353f
+}
+
+.title-styles{
+    text-align: center; 
+    color: #3cbbde; 
+    font-size: 40px
+    
+}
+
+.text-styles{
+    color:#337ab7;
+    font-size: 15px
+}
+
+.container-styles{
+    position: relative; 
+    top: 180px;
+    width:40%
+}

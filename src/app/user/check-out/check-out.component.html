@@ -1,0 +1,76 @@
+<button id=”view-cart” class="btn btn-link" ><a href="/viewCart">View Cart</a></button> 
+<button id=”Home” class="btn btn-link" ><a href="/user">Back to Home</a></button> 
+<h4>{{data}}</h4>
+<table datatable class="table table-bordered table-striped table-hover">
+    <thead>
+    <tr> 
+        <th>Category</th>
+        <th>SKU ID</th>
+        <th>Title</th>
+        <th>Description</th>
+        <th>Quantity</th>
+        <th>Price</th>
+      </tr>
+    </thead> 
+    <tbody>
+      <tr *ngFor="let itm of cart">
+        <td id="category">{{itm.category}}</td>
+        <td id="skuid">{{itm.skuId}}</td>
+        <td id="title">{{itm.title}}</td>
+        <td id="description">{{itm.description}}</td>
+        <td id="quantity">{{itm.quantity}}</td>
+        <td id="price">{{itm.price}}</td>
+      </tr>
+    </tbody>
+    </table>
+    <div class="row">
+        <div class="column">
+            <h4>Billing/Shipping Information</h4>
+          <table>
+            <tr>
+              <th>First Name</th>
+              <td><input id="first-name" type="text" [(ngModel)]="payment.fname" placeholder="Enter first your name"></td>
+            </tr>
+            <tr>
+              <td>Last Name</td>
+              <td><input id="last-name" type="text" [(ngModel)]="payment.lname" placeholder="Enter last your name"></td>
+            </tr>
+            <tr>
+              <td>Phone No</td>
+              <td><input id="phone" type="number" [(ngModel)]="payment.phoneNo" placeholder="Phone number"></td>
+            </tr>
+            <tr>
+              <td>Email</td>
+              <td><input id="email" type="text"  [(ngModel)]="payment.email" placeholder="Enter your E-mail"></td>
+            </tr>
+            <tr>
+                <td>Address</td>
+                <td><input id="address" type="text"[(ngModel)]="payment.address"  placeholder="Enter your Address"></td>
+              </tr>
+          </table>
+        </div>
+        <div class="column">
+            <h4>Payment Method</h4>
+          <table>
+            <tr>
+                <h5>Debit/Credit Card Payment</h5>
+            </tr>
+            <tr>
+              <th>Card Number</th>
+              <td><input id="card-number" type="number" [(ngModel)]="payment.cardNo" placeholder="Card Number"></td>
+            </tr>
+            <tr>
+              <td>Expiry Date</td>
+              <td><input id="expiry-date" type="date" [(ngModel)]="payment.date"></td>
+            </tr>
+            <tr>
+              <td>CVV</td>
+              <td><input id="cvv" type="number" placeholder="CVV" [(ngModel)]="payment.cvv"></td>
+            </tr>
+            <tr>
+              <td><button class="btn btn-light" (click)="checkout()">Checkout</button></td>
+            </tr>
+          </table>
+        </div>
+      </div>
+      <!-- href="/orderConform" -->

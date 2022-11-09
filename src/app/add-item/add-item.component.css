@@ -1,0 +1,22 @@
+table, th,td{
+    border: 1px solid rgb(8, 10, 10);
+    border-collapse: collapse;
+    width: 100%;
+    text-align: center;
+  }
+  td{
+    font-size: 30px;
+  }
+  .card
+  {
+    margin-left: auto; 
+    margin-right: auto;
+  }
+p{
+  font-size: small;
+}
+  
+table.center{
+  margin-left: auto; 
+  margin-right: auto;
+}
